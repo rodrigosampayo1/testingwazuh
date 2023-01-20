@@ -19,7 +19,7 @@ b. W. Server
 c. W. Dashboard
 
 
---Empezar con esto 
+--------------Empezar con esto 
 https://documentation.wazuh.com/current/deployment-options/deploying-with-ansible/installation-guide.html
 
 -install Ansible
@@ -37,8 +37,27 @@ https://documentation.wazuh.com/current/deployment-options/elastic-stack/index.h
 1.1 elastic
 https://documentation.wazuh.com/current/deployment-options/elastic-stack/distributed-deployment/elasticsearch-cluster/elasticsearch-single-node-cluster.html
 
+--PRE-Requisits
 apt-get install lsb-release curl apt-transport-https zip unzip gnupg
-
 curl -s https://artifacts.elastic.co/GPG-KEY-elasticsearch | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/elasticsearch.gpg --import && chmod 644 /usr/share/keyrings/elasticsearch.gpg
 echo "deb [signed-by=/usr/share/keyrings/elasticsearch.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" | tee /etc/apt/sources.list.d/elastic-7.x.list
 apt-get update
+
+--Elasticsearch installation and configuration
+apt-get install elasticsearch=7.17.6
+curl -so /etc/elasticsearch/elasticsearch.yml https://packages.wazuh.com/4.3/tpl/elastic-basic/elasticsearch.yml
+
+-For single wazuh server:
+cat > /usr/share/elasticsearch/instances.yml <<\EOF
+instances:
+- name: "elasticsearch"
+  ip:
+  - "10.0.0.2"
+- name: "filebeat"
+  ip:
+  - "10.0.0.3"
+- name: "kibana"
+  ip:
+  - "10.0.0.4"
+EOF
+

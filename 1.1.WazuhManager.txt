@@ -1,0 +1,5 @@
+single-node
+https://documentation.wazuh.com/current/deployment-options/elastic-stack/distributed-deployment/wazuh-cluster/wazuh-single-node-cluster.html
+
+multi-node
+https://documentation.wazuh.com/current/deployment-options/elastic-stack/distributed-deployment/wazuh-cluster/wazuh-multi-node-cluster.html

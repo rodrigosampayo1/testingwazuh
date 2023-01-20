@@ -1,0 +1,5 @@
+Single-node
+https://documentation.wazuh.com/current/deployment-options/elastic-stack/distributed-deployment/elasticsearch-cluster/elasticsearch-single-node-cluster.html
+
+Multi-node
+https://documentation.wazuh.com/current/deployment-options/elastic-stack/distributed-deployment/elasticsearch-cluster/elasticsearch-multi-node-cluster.html
