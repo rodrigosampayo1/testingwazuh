@@ -1,0 +1,44 @@
+
+install wazuh server and elastic Stack:
+https://documentation.wazuh.com/current/deployment-options/elastic-stack/all-in-one-deployment/index.html
+
+For production environments, it is recommended to deploy the Wazuh server and Wazuh indexer to different hosts.
+
+Architecture:
+https://documentation.wazuh.com/current/getting-started/architecture.html
+
+Packages list: ubuntu i386 
+https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.3.10-1_i386.deb
+
+
+
+
+1. Installing the Wazuh central components
+a. W. Indexer
+b. W. Server
+c. W. Dashboard
+
+
+--Empezar con esto 
+https://documentation.wazuh.com/current/deployment-options/deploying-with-ansible/installation-guide.html
+
+-install Ansible
+-install Wazuh indexer and dashboard
+-install wazuh manager
+-install wazuh cluster
+-install wazuh agent (on a new mach)y
+
+Task1:
+1.1 Instalar en diferentes servidores wazhu manager y elastic Stack en diferentes servidores:
+https://documentation.wazuh.com/current/deployment-options/elastic-stack/index.html
+ Es decir, en uno
+
+
+1.1 elastic
+https://documentation.wazuh.com/current/deployment-options/elastic-stack/distributed-deployment/elasticsearch-cluster/elasticsearch-single-node-cluster.html
+
+apt-get install lsb-release curl apt-transport-https zip unzip gnupg
+
+curl -s https://artifacts.elastic.co/GPG-KEY-elasticsearch | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/elasticsearch.gpg --import && chmod 644 /usr/share/keyrings/elasticsearch.gpg
+echo "deb [signed-by=/usr/share/keyrings/elasticsearch.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" | tee /etc/apt/sources.list.d/elastic-7.x.list
+apt-get update
