@@ -1,0 +1,33 @@
+1.1. Deploy a Wazuh multi-host architecture: the Wazuh manager and Elastic Stack
+must run on different servers.
+
+● What problems did you have? on it
+● How did you do the installation?
+Create 2 VM, locally, in the same network, install elasstic first and then Wazuh. Both Ubuntu vms.
+
+● What daemons are executed and are active in the background by default when a manager starts?
+Check daemons on the wazuh manager vm.
+
+1.2. Deploy and connect two agents (Linux and Windows). Use the register service
+of Wazuh named “ossec-authd”.
+
+● Did you have any problems?
+● What port does the registry service listen to?
+● What physical file stores the agents' registry information?
+
+1.3 
+● Generate events in the agent and verify the generated alerts from the manager.
+● Generate an SSH alert in the Linux agent. What is the ID of the generated alert?
+
+1.4 Describe the event flow step-by-step from the time that the event occurs in the
+agent to the time the event appears in Kibana.
+
+1.5 How many shards does every index have in this Elasticsearch cluster?
+
+Deliverables:
+● Installation screenshots / logs.
+● Screenshots of the final result in Kibana.
+● An Elasticsearch index list (_indices)
+● The Elasticsearch cluster information (_cluster)
+Reference:
+● Wazuh documentation
